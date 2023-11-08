@@ -1,0 +1,54 @@
+.nav-container {
+  width: 80%;
+  height: 130px;
+  margin: 0px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.323);
+  border-radius: 10px;
+}
+
+.nav-logo h1 {
+  font-family: "Bodoni Moda";
+  line-height: 120%;
+  letter-spacing: 8px;
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+  color: black;
+  margin-left: 90px;
+}
+
+.nav-list ul {
+  display: flex;
+  margin-left: 170px;
+}
+
+.nav-list li {
+  list-style: none;
+  margin: 20px;
+  justify-content: space-between;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: black;
+}
+
+.nav-cart-icon {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-icon {
+  font-size: 25px;
+}
+
+.cart-quantity {
+  background-color: red;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+}
