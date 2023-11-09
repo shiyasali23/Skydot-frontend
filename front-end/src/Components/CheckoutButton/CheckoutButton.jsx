@@ -13,7 +13,7 @@ const CheckoutButton = () => {
       </svg>
       <span>Checkout</span>
       <svg id="check" style={{ width: '24px', height: '24px' }} viewBox="0 0 24 24">
-        <path stroke-width="2" fill="none" stroke="#ffffff" d="M 3,12 l 6,6 l 12, -12" />
+        <path strokeWidth="2" fill="none" stroke="#ffffff" d="M 3,12 l 6,6 l 12, -12" />
       </svg>
     </button>
   );

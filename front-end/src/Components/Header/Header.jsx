@@ -24,7 +24,7 @@ const Header = () => {
         <div className="nav-cart-icon">
           <p className="cart-quantity"></p>
           <Link style={{ textDecoration: "none", color: 'black' }} to="/cart">
-            <i class="cart-icon fa-solid fa-cart-shopping"></i>
+            <i className="cart-icon fa-solid fa-cart-shopping"></i>
           </Link>
         </div>
       </div>

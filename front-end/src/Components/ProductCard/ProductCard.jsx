@@ -1,7 +1,10 @@
 import React from "react";
 import "./ProductCard.css";
+import BagIcon from "../BagIcon/BagIcon";
 
 const ProductCard = ({ image, name, price }) => {
+
+  
   return (
     <div className="product-card">
       <div className="product-img">
@@ -10,8 +13,8 @@ const ProductCard = ({ image, name, price }) => {
       <div className="product-details">
         <p className="product-name">{name}</p>
         <div className="product-price-bag">
-          <p className="product-price">{price}</p>
-          <i className="fa-solid fa-bag-shopping"></i>
+          <p className="product-price">${price}</p>
+          <BagIcon/>
         </div>
       </div>
     </div>

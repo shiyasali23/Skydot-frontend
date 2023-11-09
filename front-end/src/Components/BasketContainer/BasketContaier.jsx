@@ -1,6 +1,6 @@
 import React from "react";
 import "./BasketContaier.css";
-import product_img from "../../Resorces/MensShirt-images/Shirt-3.jpg";
+import product_img from "../../Resorces/MensShirt-images/Shirt-03.jpg";
 
 
 const BasketContaier = () => {
@@ -20,7 +20,7 @@ const BasketContaier = () => {
         <p>700</p>
       </div>
       <div className="basket-trash">
-        <i class="fa-solid fa-trash"></i>
+        <i className="fa-solid fa-trash"></i>
       </div>
     </div>
   );

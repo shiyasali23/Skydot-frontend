@@ -4,8 +4,7 @@ import offer_banner from "../../Resorces/Banner-images/offer-banner.jpg";
 import "./Store.css";
 import ProductCard from "../ProductCard/ProductCard";
 import Footer from "../Footer/Footer";
-
-import all_products from "../../products.js"
+import all_products from "../products.js"
 
 const Store = () => {
 
@@ -30,3 +29,12 @@ const Store = () => {
 };
 
 export default Store;
+
+
+
+
+
+
+
+
+

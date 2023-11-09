@@ -15,8 +15,8 @@ const Cart = () => {
 
         <div className="cart-section">
           <p className="cart-quantity"></p>
-          <Link style={{ textDecoration: "none", color: "black" }} to="/cart">
-            <i className="cart-icon fa-solid fa-cart-shopping"></i>
+          <Link style={{ textDecoration: "none", color: "black" }} to="/store">
+          <i className="store-icon fa-solid fa-store"></i>
           </Link>
         </div>
       </div>

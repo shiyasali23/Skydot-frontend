@@ -1,7 +1,7 @@
 .cart-header {
   position: relative;
   width: 80%;
-  height: 130px;
+  height: 140px;
   margin: 0px 10%;
   display: flex;
   align-items: center;
@@ -30,13 +30,14 @@
   align-items: center;
 }
 
-.cart-icon {
+.store-icon {
   font-size: 25px;
+  margin-right: 80px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.cart-icon:hover {
+.store-icon:hover {
   transform: scale(1.2);
 }
 
