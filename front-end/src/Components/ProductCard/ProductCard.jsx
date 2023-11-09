@@ -1,19 +1,17 @@
 import React from "react";
-import "./ProductCard.css"
-import product_img from "../Resorces/MensShirt-images/Shirt-1.jpg";
+import "./ProductCard.css";
 
-
-const ProductCard = () => {
+const ProductCard = ({ image, name, price }) => {
   return (
     <div className="product-card">
       <div className="product-img">
-        <img src={product_img} alt="" />
+        <img src={image} alt="" />
       </div>
       <div className="product-details">
-        <p className="product-name">MANDARIN COLLAR SHIRT</p>
+        <p className="product-name">{name}</p>
         <div className="product-price-bag">
-          <p className="product-price">$600</p>
-          <i class="fa-solid fa-bag-shopping"></i>
+          <p className="product-price">{price}</p>
+          <i className="fa-solid fa-bag-shopping"></i>
         </div>
       </div>
     </div>

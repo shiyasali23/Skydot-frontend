@@ -1,6 +1,6 @@
 import React from "react";
 import "./Introduction.css";
-import intro_image from "../Resorces/Banner-images/Skating.jpg";
+import intro_image from "../../Resorces/Banner-images/Skating.jpg";
 import { Link } from "react-router-dom";
 
 

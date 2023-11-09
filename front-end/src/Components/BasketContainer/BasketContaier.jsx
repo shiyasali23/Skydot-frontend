@@ -1,6 +1,6 @@
 import React from "react";
 import "./BasketContaier.css";
-import product_img from "../Resorces/MensShirt-images/Shirt-3.jpg";
+import product_img from "../../Resorces/MensShirt-images/Shirt-3.jpg";
 
 
 const BasketContaier = () => {
