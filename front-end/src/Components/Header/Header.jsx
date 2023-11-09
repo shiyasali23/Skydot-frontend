@@ -14,16 +14,18 @@ const Header = () => {
         </div>
         <div className="nav-list">
           <ul>
-           <Link style={{ textDecoration: 'none' }} to='/'>
-           <li>Home</li>
-           </Link> 
+            <Link style={{ textDecoration: "none" }} to="/">
+              <li>Home</li>
+            </Link>
             <li>Connect</li>
             <li>Blog</li>
           </ul>
         </div>
         <div className="nav-cart-icon">
           <p className="cart-quantity"></p>
-          <i class="cart-icon fa-solid fa-cart-shopping"></i>
+          <Link style={{ textDecoration: "none", color: 'black' }} to="/cart">
+            <i class="cart-icon fa-solid fa-cart-shopping"></i>
+          </Link>
         </div>
       </div>
     </div>

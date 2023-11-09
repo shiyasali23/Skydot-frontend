@@ -1,0 +1,28 @@
+.basket-container {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 5px 5%;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px, rgba(0, 0, 0, 0.08) 0 0 6px,
+    rgba(0, 0, 0, 0.06) 0 0 9px;
+}
+
+.basket-image {
+  width: 100px;
+  height: 150px;
+}
+
+.basket-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.basket-quantity input {
+  width: 40px;
+  margin-left:10px ;
+}
+

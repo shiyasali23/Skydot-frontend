@@ -16,7 +16,7 @@ const Introduction = () => {
             <span style={{fontWeight: 900}}>Welcome</span> to urban style redefined. Unleash your inner
             fashion icon on the city's canvas. Discover. Express. Elevate. Explore the urban landscape as your fashion playground, where each corner of the city becomes an opportunity to express your unparalleled style
           </p>
-          <Link to="/store">
+          <Link style={{textDecoration:'none'}} to="/store">
           <button className="store">Store</button></Link>
         </div>
         <div className="introduction-right">
