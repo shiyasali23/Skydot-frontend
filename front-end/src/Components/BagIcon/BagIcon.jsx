@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import all_products from '../products';
+import { cartContext } from '../../Contexts/CartProvider';
 
-const BagIcon = () => {
+const BagIcon = ({ index }) => {
   const [clicked, setClicked] = useState(false);
+  const { cartArray, setCartArray } = useContext(cartContext);
 
   const handleClick = () => {
-    setClicked(!clicked); // Toggle the value of 'clicked'
+    setClicked(prevClicked => !prevClicked);
+    if (!clicked) {
+      setCartArray([...cartArray, all_products[index]]);
+    }
   };
 
-  const iconColor = clicked ? 'red' : 'black'; 
+  let iconColor = clicked ? 'red' : 'black';
 
   return (
     <i
       className={`bag-icon fa-solid fa-bag-shopping`}
       style={{ fontSize: '17px', cursor: 'pointer', color: iconColor }}
       onClick={handleClick}
-    >
-    </i>
+    ></i>
   );
 };
 
 export default BagIcon;
+
+

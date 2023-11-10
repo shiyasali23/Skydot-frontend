@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { cartContext } from "../../Contexts/CartProvider";
 
 const Header = () => {
+
+  const{cartArray} = useContext(cartContext)
+  const cartNumber = cartArray.length
   return (
     <div className="navbar">
       <div className="nav-container">
@@ -22,7 +26,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="nav-cart-icon">
-          <p className="cart-quantity"></p>
+          <p className="cart-quantity">{cartNumber}</p>
           <Link style={{ textDecoration: "none", color: 'black' }} to="/cart">
             <i className="cart-icon fa-solid fa-cart-shopping"></i>
           </Link>
