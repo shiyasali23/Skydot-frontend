@@ -1,11 +1,15 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import BasketContaier from "../BasketContainer/BasketContaier";
 import CheckoutButton from "../CheckoutButton/CheckoutButton";
+import { cartContext } from "../../Contexts/CartProvider";
 
 const Cart = () => {
+
+  const{cartArray} =useContext(cartContext)
+  
   return (
     <div className="cart">
       <div className="cart-header">
@@ -22,7 +26,9 @@ const Cart = () => {
       </div>
       <div className="cart-container">
         <div className="cart-left">
-          <BasketContaier />
+          {cartArray.map((items)=>(
+            <BasketContaier id={items.id} name={items.name} image={items.image} price={items.price}/>
+          ))}
         </div>
 
         <div className="cart-right">

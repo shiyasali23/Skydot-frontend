@@ -28,6 +28,7 @@ const Store = () => {
               name={items.name}
               price={items.price}
               index={index}
+              id={items.id}
             />
           ))}
         </div>
