@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext, useState } from "react";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
@@ -7,9 +7,15 @@ import CheckoutButton from "../CheckoutButton/CheckoutButton";
 import { cartContext } from "../../Contexts/CartProvider";
 
 const Cart = () => {
+  const { cartArray } = useContext(cartContext);
+  const [selectedShipping, setSelectedShipping] = useState("standard");
 
-  const{cartArray} =useContext(cartContext)
-  
+  let totalPrice = 0;
+  cartArray.forEach((items) => {
+    totalPrice += items.price;
+  });
+  const shippingFee = selectedShipping === "express" ? 40 : 0;
+
   return (
     <div className="cart">
       <div className="cart-header">
@@ -19,43 +25,66 @@ const Cart = () => {
 
         <div className="cart-section">
           <p className="cart-quantity"></p>
-          <Link style={{ textDecoration: "none", color: "black" }} to="/store">
-          <i className="store-icon fa-solid fa-store"></i>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/store"
+          >
+            <i className="store-icon fa-solid fa-store"></i>
           </Link>
         </div>
       </div>
       <div className="cart-container">
         <div className="cart-left">
-          {cartArray.map((items)=>(
-            <BasketContaier id={items.id} name={items.name} image={items.image} price={items.price}/>
+          {cartArray.map((items) => (
+            <BasketContaier
+              key={items.id}
+              id={items.id}
+              name={items.name}
+              image={items.image}
+              price={items.price}
+            />
           ))}
         </div>
 
         <div className="cart-right">
           <div className="subtotal">
             <h5>Subtotal</h5>
-            <p>800</p>
+            <p>${totalPrice}</p>
           </div>
 
           <div className="shipping">
             <div className="shipping-selector">
               <div>
-                <input type="radio" id="standard-shipping" name="shipping" />
+                <input
+                  type="radio"
+                  id="standard-shipping"
+                  name="shipping"
+                  checked={selectedShipping === "standard"}
+                  onChange={() => setSelectedShipping("standard")}
+                />
                 <label htmlFor="standard-shipping">Standard </label>
               </div>
               <div>
-                <input type="radio" id="express-shipping" name="shipping" />
+                <input
+                  type="radio"
+                  id="express-shipping"
+                  name="shipping"
+                  checked={selectedShipping === "express"}
+                  onChange={() => setSelectedShipping("express")}
+                />
                 <label htmlFor="express-shipping">Express </label>
               </div>
             </div>
             <div className="shipping-fee">
-              <p>Free</p>
+              <p>
+                {selectedShipping === "standard" ? "Free" : `+${shippingFee}`}
+              </p>
             </div>
           </div>
 
           <div className="total">
             <h5>Total</h5>
-            <p>800</p>
+            <p>${totalPrice + shippingFee}</p>
           </div>
           <div className="chechkout">
             <CheckoutButton />
