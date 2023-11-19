@@ -12,17 +12,23 @@ const Header = () => {
       <div className="nav-container">
         <div className="nav-logo">
           <h1>
-            SKY <br />
-            DOT
+            SKYDOT
           </h1>
         </div>
         <div className="nav-list">
           <ul>
             <Link style={{ textDecoration: "none" }} to="/">
-              <li>Home</li>
+            <li>Shirts</li>
+            </Link>           
+            <Link style={{ textDecoration: "none" }} to="/tshirts">
+            <li>T-Shirts</li>
+            </Link>           
+            <Link style={{ textDecoration: "none" }} to="/pants">
+            <li>Pants</li>
+            </Link>           
+            <Link style={{ textDecoration: "none" }} to="/blog">
+              <li>Blog</li>
             </Link>
-            <li>Connect</li>
-            <li>Blog</li>
           </ul>
         </div>
         <div className="nav-cart-icon">

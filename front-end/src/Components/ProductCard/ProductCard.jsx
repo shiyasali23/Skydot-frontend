@@ -2,11 +2,11 @@ import React from "react";
 import "./ProductCard.css";
 import BagIcon from "../BagIcon/BagIcon";
 
-const ProductCard = ({ image, name, price, index, id}) => {
+const ProductCard = ({ image, name, price, id}) => {
 
 
   return (
-    <div className="product-card" key={index}>
+    <div className="product-card" key={id}>
       <div className="product-img">
         <img src={image} alt="" />
       </div>
@@ -14,7 +14,7 @@ const ProductCard = ({ image, name, price, index, id}) => {
         <p className="product-name">{name}</p>
         <div className="product-price-bag">
           <p className="product-price">${price}</p>
-          <BagIcon index={index} id={id}/>
+          <BagIcon id={id}/>
         </div>
       </div>
     </div>

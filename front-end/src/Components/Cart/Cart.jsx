@@ -10,12 +10,11 @@ const Cart = () => {
   const { cartArray } = useContext(cartContext);
   const [selectedShipping, setSelectedShipping] = useState("standard");
 
-  let totalPrice = 0;
-  cartArray.forEach((items) => {
-    totalPrice += items.price;
-  });
-  const shippingFee = selectedShipping === "express" ? 40 : 0;
+  const subtotalsArray = cartArray.map((items)=>items.price * items.quantity)
+  const subtotal = subtotalsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
+  const shippingFee = selectedShipping === "express" ? 40 : 0;
+ 
   return (
     <div className="cart">
       <div className="cart-header">
@@ -27,7 +26,7 @@ const Cart = () => {
           <p className="cart-quantity"></p>
           <Link
             style={{ textDecoration: "none", color: "black" }}
-            to="/store"
+            to="/"
           >
             <i className="store-icon fa-solid fa-store"></i>
           </Link>
@@ -49,7 +48,7 @@ const Cart = () => {
         <div className="cart-right">
           <div className="subtotal">
             <h5>Subtotal</h5>
-            <p>${totalPrice}</p>
+            <p>${subtotal}</p>
           </div>
 
           <div className="shipping">
@@ -84,7 +83,7 @@ const Cart = () => {
 
           <div className="total">
             <h5>Total</h5>
-            <p>${totalPrice + shippingFee}</p>
+            <p>${subtotal+shippingFee}</p>
           </div>
           <div className="chechkout">
             <CheckoutButton />

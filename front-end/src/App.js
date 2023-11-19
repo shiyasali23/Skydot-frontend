@@ -1,20 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Introduction from './Components/Introduction/Introduction';
-import Store from './Components/Store/Store';
-import Cart from './Components/Cart/Cart';
-import { CartProvider } from './Contexts/CartProvider';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Blog from "./Components/Blog/Blog";
+import Shirts from "./Components/Shirts/Shirts";
+import Cart from "./Components/Cart/Cart";
+import { CartProvider } from "./Contexts/CartProvider";
+import Tshirts from "./Components/Tshirts/Tshirts";
+import Pants from "./Components/Pants/Pants";
 
 function App() {
   return (
     <div className="App">
       <CartProvider>
-      <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Introduction/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path="/store" element={<Store/>}/>
-      </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Shirts />} />
+            <Route path="/tshirts" element={<Tshirts />} />
+            <Route path="/pants" element={<Pants />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
       </CartProvider>
     </div>
   );

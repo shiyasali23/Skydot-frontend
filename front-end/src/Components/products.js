@@ -1,79 +1,230 @@
-
 const all_products = [
-    {
-        id: "001",
-        name: "shirt-1",
-        image: require("../Resorces/MensShirt-images/Shirt-01.jpg"),
-        price: 750
-    },
-    {
-        id: "002",
-        name: "shirt-2",
-        image:  require("../Resorces/MensShirt-images/Shirt-02.jpg"),
-        price: 950
-    },
-    {
-        id: "003",
-        name: "shirt-3",
-        image:  require("../Resorces/MensShirt-images/Shirt-03.jpg"),
-        price: 800
-    },
-    {
-        id: "004",
-        name: "shirt-4",
-        image:  require("../Resorces/MensShirt-images/Shirt-04.jpg"),
-        price: 600
-    },
-    {
-        id: "005",
-        name: "shirt-5",
-        image:  require("../Resorces/MensShirt-images/Shirt-05.jpg"),
-        price: 900
-    },
-    {
-        id: "006",
-        name: "shirt-6",
-        image:  require("../Resorces/MensShirt-images/Shirt-06.jpg"),
-        price: 700
-    },
-    {
-        id: "007",
-        name: "shirt-7",
-        image: require( "../Resorces/MensShirt-images/Shirt-07.jpg"),
-        price: 1000
-    },
-    {
-        id: "008",
-        name: "shirt-8",
-        image: require("../Resorces/MensShirt-images/Shirt-08.jpg"),
-        price: 850
-    },
-    {
-        id: "009",
-        name: "shirt-9",
-        image:  require("../Resorces/MensShirt-images/Shirt-09.jpg"),
-        price: 950
-    },
-    {
-        id: "010",
-        name: "shirt-10",
-        image:  require("../Resorces/MensShirt-images/Shirt-010.jpg"),
-        price: 700
-    },
-    {
-        id: "011",
-        name: "shirt-11",
-        image:  require("../Resorces/MensShirt-images/Shirt-011.jpg"),
-        price: 800
-    },
-    {
-        id: "012",
-        name: "shirt-12",
-        image:  require("../Resorces/MensShirt-images/Shirt-012.jpg"),
-        price: 900
-    }
+  {
+    id: "ms001",
+    name: "Mens Shirt-1",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-01.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 750,
+  },
+  {
+    id: "ms002",
+    name: "Mens Shirt-2",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-02.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 950,
+  },
+  {
+    id: "ms003",
+    name: "Mens Shirt-3",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-03.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 800,
+  },
+  {
+    id: "ms004",
+    name: "Mens Shirt-4",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-04.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 600,
+  },
+  {
+    id: "ms005",
+    name: "Mens Shirt-5",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-05.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 900,
+  },
+  {
+    id: "ms006",
+    name: "Mens Shirt-6",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-06.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 700,
+  },
+  {
+    id: "ms007",
+    name: "Mens Shirt-7",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-07.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 1000,
+  },
+  {
+    id: "ms008",
+    name: "Mens Shirt-8",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-08.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 850,
+  },
+  {
+    id: "ms009",
+    name: "Mens Shirt-9",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-09.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 850,
+  },
+  {
+    id: "ms010",
+    name: "Mens Shirt-10",
+    image: require("../Resorces/Mens/MensShirt-img/MensShirt-010.jpg"),
+    gender: "men",
+    category: "shirt",
+    price: 850,
+  },
+  // --------------------Mens-Shirts------------------------------
+  {
+    id: "mts001",
+    name: "Mens Tshirt-1",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-01.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts002",
+    name: "Mens Tshirt-2",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-02.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts003",
+    name: "Mens Tshirt-3",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-03.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts004",
+    name: "Mens Tshirt-4",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-04.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts005",
+    name: "Mens Tshirt-5",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-05.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts006",
+    name: "Mens Tshirt-6",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-06.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts007",
+    name: "Mens Tshirt-7",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-07.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts008",
+    name: "Mens Tshirt-8",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-08.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts008",
+    name: "Mens Tshirt-8",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-08.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  {
+    id: "mts009",
+    name: "Mens Tshirt-9",
+    image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-09.jpg"),
+    gender: "men",
+    category: "Tshirt",
+    price: 900,
+  },
+  // --------------------Mens-Pants------------------------------
+  {
+    id: "mp001",
+    name: "Mens Pants-1",
+    image: require("../Resorces/Mens/MensPants-img/MensPants-01.jpg"),
+    gender: "men",
+    category: "pants",
+    price: 900,
+  },
+  {
+    id: "mp002",
+    name: "Mens Pants-2",
+    image: require("../Resorces/Mens/MensPants-img/MensPants-02.jpg"),
+    gender: "men",
+    category: "pants",
+    price: 900,
+  },
+  {
+    id: "mp003",
+    name: "Mens Pants-3",
+    image: require("../Resorces/Mens/MensPants-img/MensPants-03.jpg"),
+    gender: "men",
+    category: "pants",
+    price: 900,
+  },
+  {
+    id: "mp004",
+    name: "Mens Pants-4",
+    image: require("../Resorces/Mens/MensPants-img/MensPants-04.jpg"),
+    gender: "men",
+    category: "pants",
+    price: 900,
+  },
+  {
+    id: "mp005",
+    name: "Mens Pants-5",
+    image: require("../Resorces/Mens/MensPants-img/MensPants-05.jpg"),
+    gender: "men",
+    category: "pants",
+    price: 900,
+  },
+  {
+    id: "mp006",
+    name: "Mens Pants-6",
+    image: require("../Resorces/Mens/MensPants-img/MensPants-06.jpg"),
+    gender: "men",
+    category: "pants",
+    price: 900,
+  },
+  {
+    id: "mp007",
+    name: "Mens Pants-7",
+    image: require("../Resorces/Mens/MensPants-img/MensPants-07.jpg"),
+    gender: "men",
+    category: "pants",
+    price: 900,
+  },
+  {
+    id: "mp008",
+    name: "Mens Pants-8",
+    image: require("../Resorces/Mens/MensPants-img/MensPants-08.jpg"),
+    gender: "men",
+    category: "pants",
+    price: 900,
+  },
 ];
 
-
-export default all_products
-
+export default all_products;

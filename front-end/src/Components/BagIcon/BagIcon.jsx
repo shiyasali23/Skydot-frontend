@@ -2,14 +2,14 @@ import React, { useState, useContext } from "react";
 import { cartContext } from "../../Contexts/CartProvider";
 import all_products from "../products";
 
-const BagIcon = ({ index, id }) => {
+const BagIcon = ({id}) => {
   const [clicked, setClicked] = useState(false);
   const { cartArray, setCartArray } = useContext(cartContext);
 
   const handleClick = () => {
     setClicked((prevClicked) => !prevClicked);
     if (!clicked) {
-      setCartArray([...cartArray, all_products.find((item) => item.id === id)]);
+      setCartArray([...cartArray, { ...all_products.find((item) => item.id === id), quantity: 1 }]);
     } else {
       setCartArray(cartArray.filter((item) => item.id !== id));
     }
