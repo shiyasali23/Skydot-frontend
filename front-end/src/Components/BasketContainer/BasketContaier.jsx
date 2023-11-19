@@ -18,6 +18,10 @@ const BasketContaier = ({ id, name, image, price}) => {
     });
     setCartArray(updatedCartArray); 
   };
+
+  const deleteFromCart = ()=>{
+    setCartArray(cartArray.filter((item) => item.id !== id))
+  }
   
   return (
     <div className="basket-container" key={id}>
@@ -42,7 +46,7 @@ const BasketContaier = ({ id, name, image, price}) => {
         <p>{price * updatedQuantity}</p>
       </div>
       <div className="basket-trash">
-        <i className="fa-solid fa-trash"></i>
+        <i className="fa-solid fa-trash" onClick={deleteFromCart}></i>
       </div>
     </div>
   );

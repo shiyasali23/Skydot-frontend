@@ -5,6 +5,7 @@ import Cart from "./Components/Cart/Cart";
 import { CartProvider } from "./Contexts/CartProvider";
 import Tshirts from "./Components/Tshirts/Tshirts";
 import Pants from "./Components/Pants/Pants";
+import ProductPage from "./Components/ProductPage/ProductPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Shirts />} />
             <Route path="/tshirts" element={<Tshirts />} />
             <Route path="/pants" element={<Pants />} />
+            <Route path="/product/:id" element={<ProductPage/>} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>

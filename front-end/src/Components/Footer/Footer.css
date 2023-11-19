@@ -81,6 +81,7 @@
   font-size: 25px;
   margin-top: 15px;
   margin-left: 8px;
+  cursor: pointer;
   transition: transform 0.5s ease-in-out;
 }
 .social-icons i:hover {

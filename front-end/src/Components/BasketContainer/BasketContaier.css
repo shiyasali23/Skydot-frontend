@@ -26,3 +26,6 @@
   margin-left:10px ;
 }
 
+.basket-trash i{
+  cursor: pointer;
+}

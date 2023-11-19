@@ -1,13 +1,14 @@
 .product-card{
     width: 250px;
     height: 390px;
-    border: 1px solid rgba(128, 128, 128, 0.182);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 20px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 1px, rgba(0, 0, 0, 0.08) 0 0 1px,
+    rgba(0, 0, 0, 0.06) 0 0 1px;
     transition: transform 0.3s ease-in-out;
 }
  .product-card:hover{
