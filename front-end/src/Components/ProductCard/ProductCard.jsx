@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
-import AddCart from "./AddCart";
+import AddCart from "../AddToCart/AddCart";
 
 const ProductCard = ({ id, name, image, price, stocks }) => {
   return (

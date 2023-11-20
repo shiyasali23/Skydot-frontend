@@ -1,19 +1,18 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import "./AddCart.css";
 import { cartContext } from "../../Contexts/CartProvider";
 import all_products from "../products";
 
 const AddCart = ({ id }) => {
-  const [sizesArray, setSizesArray] = useState([]);
+  const selectedProduct = all_products.find((item) => item.id === id);
+  const [sizesArray] = useState(
+    Object.keys(selectedProduct.stocks).filter(
+      (size) => selectedProduct.stocks[size].availableStock > 0
+    ),
+  );
+  
   const [selectedSizes, setSelectedSizes] = useState([]);
   const { cartArray, setCartArray } = useContext(cartContext);
-  const selectedProduct = all_products.find((item) => item.id === id);
-
-  useEffect(() => {
-    const availableSizes = Object.keys(selectedProduct.stocks)
-      .filter((size) => selectedProduct.stocks[size].availableStock > 0);
-    setSizesArray(availableSizes);
-  }, [selectedProduct]);
 
   const handleSizeClick = (size) => {
     const isSelected = selectedSizes.includes(size);
@@ -23,7 +22,6 @@ const AddCart = ({ id }) => {
       setSelectedSizes([...selectedSizes, size]);
     }
   };
-
 
   const createUpdatedProduct = () => {
     return {
@@ -41,20 +39,25 @@ const AddCart = ({ id }) => {
   };
 
   const findAndUpdateCart = (updatedProduct) => {
-    const existingProductIndex = cartArray.findIndex((item) => item.id === updatedProduct.id);
-    const newCartArray = existingProductIndex !== -1
-      ? [...cartArray.slice(0, existingProductIndex), updatedProduct, ...cartArray.slice(existingProductIndex + 1)]
-      : [...cartArray, updatedProduct];
+    const existingProductIndex = cartArray.findIndex(
+      (item) => item.id === updatedProduct.id
+    );
+    const newCartArray =
+      existingProductIndex !== -1
+        ? [
+            ...cartArray.slice(0, existingProductIndex),
+            updatedProduct,
+            ...cartArray.slice(existingProductIndex + 1),
+          ]
+        : [...cartArray, updatedProduct];
 
     setCartArray(newCartArray);
   };
 
   const AddToCart = () => {
     if (selectedSizes.length === 0) return;
-
     const updatedProduct = createUpdatedProduct();
     findAndUpdateCart(updatedProduct);
-    
   };
   console.log(cartArray);
   return (
@@ -64,7 +67,9 @@ const AddCart = ({ id }) => {
           <button
             key={size}
             style={{
-              background: selectedSizes.includes(size) ? "black" : "transparent",
+              background: selectedSizes.includes(size)
+                ? "black"
+                : "transparent",
               color: selectedSizes.includes(size) ? "white" : "black",
             }}
             className="size-button"

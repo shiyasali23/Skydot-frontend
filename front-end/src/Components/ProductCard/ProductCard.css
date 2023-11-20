@@ -9,7 +9,6 @@
     rgba(0, 0, 0, 0.06) 0 0 1px;
     margin-bottom: 20px;
     cursor: pointer;
-
     transition: transform 0.3s ease-in-out;
 }
  .product-card:hover{
