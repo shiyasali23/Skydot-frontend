@@ -20,6 +20,7 @@ const Tshirts = () => {
               name={items.name}
               image={items.image}
               price={items.price}
+              stocks = {items.stocks}
             />
           ) : null
         )}

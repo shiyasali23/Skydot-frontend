@@ -1,0 +1,45 @@
+.addCart-container {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sizes-container {
+  display: flex;
+}
+
+.size-button {
+  display: flex;
+  justify-content: center;
+  padding: 0px 5px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 27px;
+  height: 27px;
+  border-radius: 5px;
+  border: 1px solid rgb(204, 204, 204);
+  margin: 5px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.size-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 2px, rgba(0, 0, 0, 0.08) 0 0 4px,
+    rgba(0, 0, 0, 0.06) 0 0 6px;
+  transform: scale(1.1);
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.fa-bag-shopping {
+  font-size: 20px;
+}
+
+.fa-bag-shopping:hover {
+
+    transform: scale(1.1);
+  }

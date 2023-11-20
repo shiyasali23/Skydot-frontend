@@ -21,6 +21,7 @@ const Pants = () => {
               image={items.image}
               price={items.price}
               quantity={items.quantity}
+              stocks = {items.stocks}
             />
           ) : null
         )}

@@ -1,9 +1,9 @@
 import React from "react";
 import "./ProductCard.css";
-import BagIcon from "../BagIcon/BagIcon";
 import { Link } from "react-router-dom";
+import AddCart from "./AddCart";
 
-const ProductCard = ({ image, name, price, id }) => {
+const ProductCard = ({ id, name, image, price, stocks }) => {
   return (
     <div className="product-card" key={id}>
       <div className="product-img">
@@ -12,14 +12,15 @@ const ProductCard = ({ image, name, price, id }) => {
         </Link>
       </div>
       <div className="product-details">
-        <Link style={{ textDecoration: "none", color:"black"}} to={`/product/${id}`}>
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          to={`/product/${id}`}
+        >
           <p className="product-name">{name}</p>
         </Link>
 
-        <div className="product-price-bag">
-          <p className="product-price">${price}</p>
-          <BagIcon id={id} />
-        </div>
+        <p className="product-price">${price}</p>
+        <AddCart id={id} stocks={stocks} />
       </div>
     </div>
   );

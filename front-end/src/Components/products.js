@@ -1,7 +1,7 @@
 const all_products = [
   {
     id: "ms001",
-    name: "Mens Shirt-1",
+    name: "Mens Shirt-0",
     image: require("../Resorces/Mens/MensShirt-img/MensShirt-01.jpg"),
     gender: "men",
     category: "shirt",
@@ -9,16 +9,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
 
@@ -32,16 +36,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -54,16 +62,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -76,16 +88,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -98,16 +114,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -120,16 +140,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -142,16 +166,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     },
   },
   {
@@ -164,16 +192,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -186,16 +218,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -208,22 +244,26 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   // --------------------Mens-Shirts------------------------------
   {
     id: "mts001",
-    name: "Mens Tshirt-1",
+    name: "Mens Tshirt-0",
     image: require("../Resorces/Mens/MensTshirt-img/MensTshirt-01.jpg"),
     gender: "men",
     category: "Tshirt",
@@ -231,16 +271,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -253,16 +297,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -275,16 +323,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -297,16 +349,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -319,16 +375,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -341,16 +401,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -363,16 +427,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -385,16 +453,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -407,16 +479,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -429,22 +505,26 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   // --------------------Mens-Pants------------------------------
   {
     id: "mp001",
-    name: "Mens Pants-1",
+    name: "Mens Pants-0",
     image: require("../Resorces/Mens/MensPants-img/MensPants-01.jpg"),
     gender: "men",
     category: "pants",
@@ -452,16 +532,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -474,16 +558,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -496,16 +584,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -518,16 +610,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -540,16 +636,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -562,16 +662,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -584,16 +688,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
   {
@@ -606,16 +714,20 @@ const all_products = [
     stocks: {
       S : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       M : {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
       L: {
         availableStock: 20,
-        userNeeds : 1
+        userNeeds : 0
       },
+       XL: {
+        availableStock:20,
+        userNeeds:0
+      }
     }
   },
 ];
@@ -658,11 +770,8 @@ export default all_products;
 //   L:{
 //     availableStocks: 20,
 //     userNeeds: (requestedQuantity)=>{
-//        const availableStocks =this.stocks.L.availableStocks;
+//     
 
-//        if (requestedQuantity <= availableStocks){
-//         console.log("release product")
-//        }
 //       else{
 //         console.log("out of stock")
 //       }
