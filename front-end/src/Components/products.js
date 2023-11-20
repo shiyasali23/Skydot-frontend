@@ -6,7 +6,22 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 750,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
+
   {
     id: "ms002",
     name: "Mens Shirt-2",
@@ -14,6 +29,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 950,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "ms003",
@@ -22,6 +51,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 800,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "ms004",
@@ -30,6 +73,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 600,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "ms005",
@@ -38,6 +95,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "ms006",
@@ -46,6 +117,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 700,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "ms007",
@@ -54,6 +139,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 1000,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    },
   },
   {
     id: "ms008",
@@ -62,6 +161,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 850,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "ms009",
@@ -70,6 +183,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 850,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "ms010",
@@ -78,6 +205,20 @@ const all_products = [
     gender: "men",
     category: "shirt",
     price: 850,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   // --------------------Mens-Shirts------------------------------
   {
@@ -87,6 +228,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts002",
@@ -95,6 +250,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts003",
@@ -103,6 +272,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts004",
@@ -111,6 +294,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts005",
@@ -119,6 +316,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts006",
@@ -127,6 +338,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts007",
@@ -135,6 +360,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts008",
@@ -143,6 +382,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts008",
@@ -151,6 +404,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mts009",
@@ -159,6 +426,20 @@ const all_products = [
     gender: "men",
     category: "Tshirt",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   // --------------------Mens-Pants------------------------------
   {
@@ -168,6 +449,20 @@ const all_products = [
     gender: "men",
     category: "pants",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mp002",
@@ -176,6 +471,20 @@ const all_products = [
     gender: "men",
     category: "pants",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mp003",
@@ -184,6 +493,20 @@ const all_products = [
     gender: "men",
     category: "pants",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mp004",
@@ -192,6 +515,20 @@ const all_products = [
     gender: "men",
     category: "pants",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mp005",
@@ -200,6 +537,20 @@ const all_products = [
     gender: "men",
     category: "pants",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mp006",
@@ -208,6 +559,20 @@ const all_products = [
     gender: "men",
     category: "pants",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mp007",
@@ -216,6 +581,20 @@ const all_products = [
     gender: "men",
     category: "pants",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
   {
     id: "mp008",
@@ -224,7 +603,69 @@ const all_products = [
     gender: "men",
     category: "pants",
     price: 900,
+    stocks: {
+      S : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      M : {
+        availableStock: 20,
+        userNeeds : 1
+      },
+      L: {
+        availableStock: 20,
+        userNeeds : 1
+      },
+    }
   },
 ];
 
 export default all_products;
+
+
+
+
+// ---------------------------------------
+
+
+// stocks: {
+//   S:{
+//     availableStocks: 20,
+//     userNeeds: (requestedQuantity)=>{
+//        const availableStocks =this.stocks.S.availableStocks;
+
+//        if (requestedQuantity <= availableStocks){
+//         console.log("release product")
+//        }
+//       else{
+//         console.log("out of stock")
+//       }
+//     },
+//   },
+//   M :{
+//     availableStocks: 20,
+//     userNeeds: (requestedQuantity)=>{
+//        const availableStocks =this.stocks.M.availableStocks;
+
+//        if (requestedQuantity <= availableStocks){
+//         console.log("release product")
+//        }
+//       else{
+//         console.log("out of stock")
+//       }
+//     },
+//   },
+//   L:{
+//     availableStocks: 20,
+//     userNeeds: (requestedQuantity)=>{
+//        const availableStocks =this.stocks.L.availableStocks;
+
+//        if (requestedQuantity <= availableStocks){
+//         console.log("release product")
+//        }
+//       else{
+//         console.log("out of stock")
+//       }
+//     },
+//   }
+// }
