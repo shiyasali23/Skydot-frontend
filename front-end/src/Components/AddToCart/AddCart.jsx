@@ -59,7 +59,7 @@ const AddCart = ({ id }) => {
     const updatedProduct = createUpdatedProduct();
     findAndUpdateCart(updatedProduct);
   };
-  console.log(cartArray);
+  
   return (
     <div className="addCart-container">
       <div className="sizes-container">

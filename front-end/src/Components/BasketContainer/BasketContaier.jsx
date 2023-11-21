@@ -1,35 +1,77 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import "./BasketContaier.css";
 import { cartContext } from "../../Contexts/CartProvider";
 
-const BasketContaier = ({ id, name, image, price}) => {
+// ... (imports)
+
+const BasketContainer = ({ id, size }) => {
+  const { cartArray, setCartArray } = useContext(cartContext);
+  const selectedProduct = cartArray.find((item) => item.id === id);
+
   const [updatedQuantity, setQuantity] = useState(1);
-  const { cartArray,setCartArray } = useContext(cartContext);
 
   const handleQuantityChange = (event) => {
     const newQuantity = Math.max(1, Math.floor(Number(event.target.value)));
     setQuantity(newQuantity);
-  
-    const updatedCartArray = cartArray.map((items) => {
-      if (items.id === id) {
-        return { ...items, quantity: newQuantity };
-      }
-      return items;
+
+    setCartArray((prevCartArray) => {
+      const updatedCartArray = prevCartArray.map((items) => {
+        if (items.id === id) {
+          const updatedItem = {
+            ...items,
+            quantity: newQuantity,
+            stocks: {
+              ...items.stocks,
+              [size]: {
+                ...items.stocks[size],
+                userNeeds: newQuantity,
+              },
+            },
+          };
+          return updatedItem;
+        }
+        return items;
+      });
+      return updatedCartArray;
     });
-    setCartArray(updatedCartArray); 
   };
 
-  const deleteFromCart = ()=>{
-    setCartArray(cartArray.filter((item) => item.id !== id))
-  }
-  
+  const resetUserNeeds = () => {
+    setCartArray((prevCartArray) => {
+      const updatedCartArray = prevCartArray.map((items) => {
+        if (items.id === id) {
+          const updatedItem = {
+            ...items,
+            stocks: {
+              ...items.stocks,
+              [size]: {
+                ...items.stocks[size],
+                userNeeds: 0,
+              },
+            },
+          };
+          return updatedItem;
+        }
+        return items;
+      });
+      return updatedCartArray;
+    });
+  };
+
+  const calculateSubtotal = () => {
+    return selectedProduct.price * updatedQuantity;
+  };
+
   return (
-    <div className="basket-container" key={id}>
+    <div className="basket-container">
       <div className="basket-image">
-        <img src={image} alt="" />
+        <img src={selectedProduct.image} alt={selectedProduct.name} />
       </div>
       <div className="basket-name">
-        <p>{name}</p>
+        <p>{selectedProduct.name}</p>
+      </div>
+      <div className="product-size">
+        <p>{size}</p>
       </div>
       <div className="basket-quantity">
         <label htmlFor="quantity">Qnt</label>
@@ -43,13 +85,13 @@ const BasketContaier = ({ id, name, image, price}) => {
         />
       </div>
       <div className="basket-subtotal">
-        <p>{price * updatedQuantity}</p>
+        <p>{calculateSubtotal()}</p>
       </div>
       <div className="basket-trash">
-        <i className="fa-solid fa-trash" onClick={deleteFromCart}></i>
+        <i className="fa-solid fa-trash" onClick={resetUserNeeds}></i>
       </div>
     </div>
   );
 };
 
-export default BasketContaier;
+export default BasketContainer;

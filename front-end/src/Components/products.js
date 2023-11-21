@@ -1,7 +1,7 @@
 const all_products = [
   {
     id: "ms001",
-    name: "Mens Shirt-0",
+    name: "Mens Shirt-1",
     image: require("../Resorces/Mens/MensShirt-img/MensShirt-01.jpg"),
     gender: "men",
     category: "shirt",

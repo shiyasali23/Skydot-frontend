@@ -10,11 +10,22 @@ const Cart = () => {
   const { cartArray } = useContext(cartContext);
   const [selectedShipping, setSelectedShipping] = useState("standard");
 
-  const subtotalsArray = cartArray.map((items)=>items.price * items.quantity)
-  const subtotal = subtotalsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  const subtotalsArray = cartArray.map((items) => {
+    const { stocks } = items;
+    const totalUserNeeds = Object.values(stocks).reduce(
+      (total, sizeInfo) => total + sizeInfo.userNeeds,
+      0
+    );
+    return items.price * totalUserNeeds;
+  });
+ 
+  const subtotal = subtotalsArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
 
   const shippingFee = selectedShipping === "express" ? 40 : 0;
- 
+  console.log(cartArray);
   return (
     <div className="cart">
       <div className="cart-header">
@@ -22,27 +33,25 @@ const Cart = () => {
           <h1>SkyDot</h1>
         </Link>
 
-        <div className="cart-section">
-          <p className="cart-quantity"></p>
-          <Link
-            style={{ textDecoration: "none", color: "black" }}
-            to="/"
-          >
+        <div className="store-section">
+          <Link style={{ textDecoration: "none", color: "black" }} to="/">
             <i className="store-icon fa-solid fa-store"></i>
           </Link>
         </div>
       </div>
       <div className="cart-container">
         <div className="cart-left">
-          {cartArray.map((items) => (
-            <BasketContaier
-              key={items.id}
-              id={items.id}
-              name={items.name}
-              image={items.image}
-              price={items.price}
-            />
-          ))}
+          {cartArray.map((item) =>
+            Object.keys(item.stocks).map((size) =>
+              item.stocks[size].userNeeds >= 1 ? (
+                <BasketContaier
+                  key={`${item.id}-${size}`}
+                  id={item.id}
+                  size={size}
+                />
+              ) : null
+            )
+          )}
         </div>
 
         <div className="cart-right">
@@ -83,7 +92,7 @@ const Cart = () => {
 
           <div className="total">
             <h5>Total</h5>
-            <p>${subtotal+shippingFee}</p>
+            <p>${subtotal + shippingFee}</p>
           </div>
           <div className="chechkout">
             <CheckoutButton />
