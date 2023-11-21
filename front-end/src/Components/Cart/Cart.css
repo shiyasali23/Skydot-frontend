@@ -1,22 +1,27 @@
 .cart-header {
-  position: relative;
-  width: 80%;
-  height: 140px;
-  margin: 0px 10%;
+  width: 90%;
+  height: 132px;
+  margin: 0px 5%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items:flex-end;
+  justify-content: space-between;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.323);
 }
 
-.cart-header h1 {
-  letter-spacing: 8px;
-  font-size: 40px;
-  color: black;
+.cart-header div{
+  margin: 33px 0px;
 }
 
+.header-logo h1 {
+  letter-spacing: 8px;
+  font-size: 35px;
+  font-weight: 800;
+  color: black;
+  margin-left: 25px;
+}
 
 .store-icon {
+  margin-right: 25px;
   font-size: 25px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -26,7 +31,7 @@
   transform: scale(1.2);
 }
 
-
+/* --------------Main-Container------------ */
 
 .cart-container {
   width: 80%;
@@ -42,7 +47,6 @@
   height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   overflow-y: auto;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px, rgba(0, 0, 0, 0.08) 0 0 6px,
@@ -85,7 +89,6 @@
 .shipping-selector{
   display: flex;
   flex-direction: column;
-
   justify-content: space-around;
   height: 40px;
   
@@ -96,5 +99,70 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+}
+
+@media screen and (max-width: 768px){
+  .cart-header{
+    height: 80px;
+    align-items: flex-end;
+  }
+
+  .cart-header div{
+    margin: 20px 0px;
+  }
+
+  .header-logo h1 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .cart-container {
+    width: 90%;
+    height: 480px;
+    margin: 20px 5%;
+  }
+
+  .subtotal h5{
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .subtotal p{
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .shipping-selector label{
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+  .shipping-selector input{
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+
+  .shipping-fee p{
+    width: 30px;
+    height: 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 17px;
+    color: green;
+  }
+
+  .total h5{
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .total p{
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
 
 }

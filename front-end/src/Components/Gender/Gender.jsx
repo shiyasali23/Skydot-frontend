@@ -6,6 +6,12 @@ const Gender = () => {
         <div className="men">
             <h1>Men</h1>
         </div>
+        <div className="slash">
+          <h1>|</h1>
+        </div>
+        <div className="women">
+          <h1>Women</h1>
+        </div>
     </div>
   )
 }

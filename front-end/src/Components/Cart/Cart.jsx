@@ -29,10 +29,11 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="cart-header">
+        <div className="header-logo">
         <Link style={{ textDecoration: "none", color: "black" }} to="/">
-          <h1>SkyDot</h1>
+          <h1>SKYDOT</h1>
         </Link>
-
+        </div>
         <div className="store-section">
           <Link style={{ textDecoration: "none", color: "black" }} to="/">
             <i className="store-icon fa-solid fa-store"></i>

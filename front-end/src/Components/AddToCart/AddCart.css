@@ -1,5 +1,5 @@
 .addCart-container {
-  height: 40px;
+  height: 35px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -19,7 +19,7 @@
   height: 27px;
   border-radius: 5px;
   border: 1px solid rgb(204, 204, 204);
-  margin: 5px;
+  margin-right: 10px;
   cursor: pointer;
   font-size: 11px;
   transition: transform 0.3s ease-in-out;
@@ -40,6 +40,24 @@
 }
 
 .fa-bag-shopping:hover {
+  transform: scale(1.1);
+}
 
-    transform: scale(1.1);
+@media screen and (max-width: 768px) {
+  .addCart-container {
+    width: 82%;
+    height: 20px;
+    margin: 0px 9%;
+    justify-content: space-between;
   }
+
+  .size-button {
+    width: 16px;
+    height: 16px;
+    font-size: 5px;
+  }
+
+  .fa-bag-shopping {
+    font-size: 13px;
+  }
+}

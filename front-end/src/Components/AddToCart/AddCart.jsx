@@ -4,6 +4,7 @@ import { cartContext } from "../../Contexts/CartProvider";
 import all_products from "../products";
 
 const AddCart = ({ id }) => {
+  const { cartArray, setCartArray } = useContext(cartContext);
   const selectedProduct = all_products.find((item) => item.id === id);
   const [sizesArray] = useState(
     Object.keys(selectedProduct.stocks).filter(
@@ -12,8 +13,6 @@ const AddCart = ({ id }) => {
   );
   
   const [selectedSizes, setSelectedSizes] = useState([]);
-  const { cartArray, setCartArray } = useContext(cartContext);
-
   const handleSizeClick = (size) => {
     const isSelected = selectedSizes.includes(size);
     if (isSelected) {
@@ -58,8 +57,9 @@ const AddCart = ({ id }) => {
     if (selectedSizes.length === 0) return;
     const updatedProduct = createUpdatedProduct();
     findAndUpdateCart(updatedProduct);
+    
   };
-  
+ 
   return (
     <div className="addCart-container">
       <div className="sizes-container">
@@ -81,7 +81,7 @@ const AddCart = ({ id }) => {
       </div>
 
       <div className="bag-container">
-        <i className="fa-solid fa-bag-shopping" onClick={AddToCart}></i>
+      <i className="fa-solid fa-bag-shopping" onClick={AddToCart}></i>
       </div>
     </div>
   );

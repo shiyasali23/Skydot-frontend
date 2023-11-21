@@ -9,6 +9,7 @@ export const CartProvider = ({ children }) => {
     return Object.values(item.stocks).some(size => size.userNeeds > 0);
   });
 
+
   return (
     <cartContext.Provider value={{ cartArray:filteredCartArray, setCartArray }}>
       {children}

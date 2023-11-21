@@ -74,7 +74,6 @@ const BasketContainer = ({ id, size }) => {
         <p>{size}</p>
       </div>
       <div className="basket-quantity">
-        <label htmlFor="quantity">Qnt</label>
         <input
           type="number"
           id="quantity"
@@ -88,7 +87,7 @@ const BasketContainer = ({ id, size }) => {
         <p>{calculateSubtotal()}</p>
       </div>
       <div className="basket-trash">
-        <i className="fa-solid fa-trash" onClick={resetUserNeeds}></i>
+        <i className="fa-solid fa-trash deleticon" onClick={resetUserNeeds}></i>
       </div>
     </div>
   );
