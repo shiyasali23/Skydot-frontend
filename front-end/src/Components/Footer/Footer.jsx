@@ -8,7 +8,7 @@ const Footer = () => {
        
         <div className="footer-left">
           <h1>
-            Sky <br /> Dot.
+            SKYDOT
           </h1>
           <p>Subscibe for early updates</p>
           <form>

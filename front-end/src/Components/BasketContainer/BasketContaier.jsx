@@ -7,9 +7,12 @@ import { cartContext } from "../../Contexts/CartProvider";
 const BasketContainer = ({ id, size }) => {
   const { cartArray, setCartArray } = useContext(cartContext);
   const selectedProduct = cartArray.find((item) => item.id === id);
+  const availableQuantity = selectedProduct.stocks[size].availableStock
+  const  stocksArray = Array.from({ length: availableQuantity }, (_, index) => index + 1);
 
   const [updatedQuantity, setQuantity] = useState(1);
 
+  console.log(stocksArray);
   const handleQuantityChange = (event) => {
     const newQuantity = Math.max(1, Math.floor(Number(event.target.value)));
     setQuantity(newQuantity);
@@ -74,14 +77,11 @@ const BasketContainer = ({ id, size }) => {
         <p>{size}</p>
       </div>
       <div className="basket-quantity">
-        <input
-          type="number"
-          id="quantity"
-          name="quantity"
-          min="1"
-          value={updatedQuantity}
-          onChange={handleQuantityChange}
-        />
+      <select name="quantity" id="" onChange={handleQuantityChange}>
+        {stocksArray.map((items, index)=>(
+          <option value={items} key={index}>{items}</option>
+        ))}
+      </select>
       </div>
       <div className="basket-subtotal">
         <p>{calculateSubtotal()}</p>

@@ -1,24 +1,20 @@
 
 button {
-  border: 0;
+  color: rgba(0, 0, 0, 0.775);
+  border: 1px solid lightgray;
   display: flex;
   align-items: center;
   padding: 16px 20px 16px 15px;
   height: 56px;
   position: relative;
-  font-family: inherit;
-  font-size: 1em;
-  line-height: 1em;
-  font-weight: 500;
-  background-color: rgba(0, 0, 0, 0.152);
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.105);
   cursor: pointer;
-  border-radius: 32px;
-  -webkit-tap-highlight-color: transparent;
+  border-radius: 10px;
   transition: box-shadow 0.2s ease, background-color 150ms ease;
-  &:focus {
-    
-    outline: none;
-  }
+  
 
   &:hover,
   &:active {
@@ -104,7 +100,8 @@ button {
 
 @media screen and (max-width: 768px){
  button{
-  padding: 17px 15px 17px 15px;
+  padding: 10px 15px 10px 15px;
   height: 50px;
+  width: 130px;
  }
 }
