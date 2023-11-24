@@ -11,18 +11,20 @@
 }
 
 .size-button {
-  display: flex;
-  justify-content: center;
-  padding: 0px 5px;
-  background-color: rgba(0, 0, 0, 0);
   width: 27px;
   height: 27px;
-  border-radius: 5px;
+  padding: 0px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
   margin-right: 10px;
   cursor: pointer;
   font-size: 11px;
   transition: transform 0.3s ease-in-out;
+  font-weight: 400;
 }
 
 .size-button:hover {
@@ -31,12 +33,11 @@
   transform: scale(1.1);
 }
 
-.hidden-checkbox {
-  display: none;
-}
+
 
 .fa-bag-shopping {
   font-size: 20px;
+  color: #283618;
 }
 
 .fa-bag-shopping:hover {

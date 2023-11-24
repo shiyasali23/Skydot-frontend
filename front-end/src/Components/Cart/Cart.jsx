@@ -11,9 +11,8 @@ const Cart = () => {
   const [selectedShipping, setSelectedShipping] = useState("standard");
 
   const subtotalsArray = cartArray.map((items) => {
-    const { stocks } = items;
-    const totalUserNeeds = Object.values(stocks).reduce(
-      (total, sizeInfo) => total + sizeInfo.userNeeds,
+    const totalUserNeeds = Object.values(items.stocks).reduce(
+      (total, size) => total + size.userNeeds,
       0
     );
     return items.price * totalUserNeeds;

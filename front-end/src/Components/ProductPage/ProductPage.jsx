@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../Header/Header";
 import "./ProductPage.css";
@@ -18,7 +18,6 @@ const ProductPage = () => {
   const { cartArray, setCartArray } = useContext(cartContext);
 
   const [selectedSizes, setSelectedSizes] = useState([]);
-
 
   const [imgArray] = useState([
     selectedProduct.image,
@@ -84,7 +83,7 @@ const ProductPage = () => {
         <div className="display-left">
           <div className="display-left-top">
             <div className="main-img">
-            <img src={selectedImg} alt="" />
+              <img src={selectedImg} alt="" />
             </div>
           </div>
           <div className="display-left-bottom">
@@ -98,41 +97,43 @@ const ProductPage = () => {
         {/* ------------------Right--------------- */}
         <div className="display-right">
           <div className="display-right-top">
-            <div className="product-name">
+            <div className="product-page-name">
               <p>{selectedProduct?.name}</p>
             </div>
-            <div className="product-price">
-              <p>{selectedProduct?.price}</p>
+            <div className="product-page-price">
+              <p>${selectedProduct?.price}</p>
             </div>
-            <div className="sizes">
-              <p>Select Size</p>
-              <div className="sizes-icons">
-              {sizesArray.map((size) => (
-                <button
-                  key={size}
-                  style={{
-                    background: selectedSizes.includes(size)
-                      ? "black"
-                      : "transparent",
-                    color: selectedSizes.includes(size) ? "white" : "black",
-                  }}
-                  className="size-button"
-                  onClick={() => handleSizeClick(size)}
-                >
-                  {size}
-                </button>
-              ))}
+            <div className="select-sizes-section">
+              <div className="sizes-buttons-container">
+                {sizesArray.map((size) => (
+                  <button
+                    key={size}
+                    style={{
+                      background: selectedSizes.includes(size)
+                        ? "black"
+                        : "transparent",
+                      color: selectedSizes.includes(size) ? "white" : "black",
+                    }}
+                    onClick={() => handleSizeClick(size)}
+                  >
+                    {size}
+                  </button>
+                ))}
               </div>
-              <button onClick={AddToCart}>Add Cart</button>
+              <div className="add-cart-button-container">
+                <button className="add-cart-button" onClick={AddToCart}>
+                  Add Cart
+                </button>
+              </div>
             </div>
           </div>
 
           <div className="display-right-bottom">
-            <h1>Product Details</h1>
+            <h1>Product Details:-</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
               inventore culpa dolores eum voluptatibus, commodi explicabo ut qui
-              nostrum quidem voluptatem debitis officiis vitae
+              nostrum quidem volu  ptatem debitis officiis vitae lo
             </p>
           </div>
         </div>

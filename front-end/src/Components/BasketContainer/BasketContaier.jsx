@@ -2,19 +2,19 @@ import React, { useState, useContext } from "react";
 import "./BasketContaier.css";
 import { cartContext } from "../../Contexts/CartProvider";
 
-// ... (imports)
+
 
 const BasketContainer = ({ id, size }) => {
   const { cartArray, setCartArray } = useContext(cartContext);
   const selectedProduct = cartArray.find((item) => item.id === id);
   const availableQuantity = selectedProduct.stocks[size].availableStock
   const  stocksArray = Array.from({ length: availableQuantity }, (_, index) => index + 1);
+  const userNeedQuantity = selectedProduct.stocks[size].userNeeds
 
-  const [updatedQuantity, setQuantity] = useState(1);
+  const [updatedQuantity, setQuantity] = useState(userNeedQuantity);
 
-  console.log(stocksArray);
   const handleQuantityChange = (event) => {
-    const newQuantity = Math.max(1, Math.floor(Number(event.target.value)));
+    const newQuantity = event.target.value;
     setQuantity(newQuantity);
 
     setCartArray((prevCartArray) => {
@@ -22,12 +22,11 @@ const BasketContainer = ({ id, size }) => {
         if (items.id === id) {
           const updatedItem = {
             ...items,
-            quantity: newQuantity,
             stocks: {
               ...items.stocks,
               [size]: {
                 ...items.stocks[size],
-                userNeeds: newQuantity,
+                userNeeds: parseInt(newQuantity,10),
               },
             },
           };
@@ -73,13 +72,13 @@ const BasketContainer = ({ id, size }) => {
       <div className="basket-name">
         <p>{selectedProduct.name}</p>
       </div>
-      <div className="product-size">
+      <div className="basket-size">
         <p>{size}</p>
       </div>
       <div className="basket-quantity">
-      <select name="quantity" id="" onChange={handleQuantityChange}>
+      <select onChange={handleQuantityChange} value={updatedQuantity}>
         {stocksArray.map((items, index)=>(
-          <option value={items} key={index}>{items}</option>
+          <option key={index} value={items}>{items}</option>
         ))}
       </select>
       </div>
@@ -94,3 +93,4 @@ const BasketContainer = ({ id, size }) => {
 };
 
 export default BasketContainer;
+
